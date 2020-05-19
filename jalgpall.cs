@@ -9,7 +9,7 @@ public class Jalgpall{
     var players=File.ReadAllLines("jalgpall.txt").Select(rida => rida.Split(' ')).
         Select(m => new{pknimi=m[0], goals=int.Parse(m[1])});
 
-    var playersSortedByGoal=players.OrderBy(player => player.goals);
+    var playersSortedByGoal=players.OrderBy(player => -player.goals);
 
     Console.WriteLine("Most goals: " + string.Join(" ", playersSortedByGoal.Take(1)));  
 
