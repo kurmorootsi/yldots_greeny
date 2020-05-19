@@ -19,7 +19,7 @@ public class Jalgpall{
 
 
     File.WriteAllLines("sortgoals.txt", 
-        playersSortedByGoal.Select(player => player.pknimi+" on löönud "+int.Parse(player.goals*0.8)+" klubiväravat"));
+        playersSortedByGoal.Select(player => player.pknimi+" on löönud "+(player.goals*0.8)+" klubiväravat"));
 
   }
 }
