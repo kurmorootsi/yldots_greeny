@@ -11,12 +11,7 @@ public class Jalgpall{
 
     var playersSortedByGoal=players.OrderBy(player => player.goals);
 
-    Console.WriteLine(
-        players
-            .OrderBy(player => player.goals)
-            .Take(1)
-        );
-
+    Console.WriteLine("Most goals: " + string.Join(" ", playersSortedByGoal.Take(1)));  
 
     File.WriteAllLines("sortgoals.txt", 
         playersSortedByGoal.Select(player => player.pknimi+" on löönud "+(player.goals*0.8)+" klubiväravat"));
