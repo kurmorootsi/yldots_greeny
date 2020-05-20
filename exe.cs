@@ -7,9 +7,9 @@ class Failipunktid
 {
 	public static void Main(string[] arg)
 	{
-		//inimestePikkus();
+		inimestePikkus();
 		//inimesteMassiiv();
-		inimesteTabelMassiiv();
+		//inimesteTabelMassiiv();
 	}
 
 	public static void inimestePikkus() {
