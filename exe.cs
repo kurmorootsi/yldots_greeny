@@ -27,15 +27,7 @@ class Failipunktid
         } 
 	}
 
-	public static void inimesteTabelMassiiv() {
-		var inimene_linn=File.ReadAllLines("pikkused_tabel.txt").Select(rida => rida.Split(' ')).
-			Select(m => new{eesnimi=m[0], linn=m[1]});
 
-		var linn_sorted=inimene_linn.OrderBy(linnad => -linnad.linn);
-
-		    File.WriteAllLines("linnad_sorted.txt", 
-        linn_sorted.Select(linnad => linnad.linn));
-	}
 
 
     public static string Sorenda(string tekst) {
